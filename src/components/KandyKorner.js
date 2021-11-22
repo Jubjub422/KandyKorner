@@ -1,16 +1,32 @@
-import { Route } from "react-router-dom/cjs/react-router-dom.min"
-import { ApplicationViews } from "./ApplicationViews"
-import { NavBar } from "./NavBar/NavBar"
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
+import { ApplicationViews } from "./ApplicationViews";
+import { NavBar } from "./NavBar/NavBar";
+import { Login } from "./auth/Login";
+import { Register } from "./auth/Register";
 
+export const KandyKorner = () => (
+  <>
+    <Route
+      render={() => {
+        if (localStorage.getItem("kandy_customer")) {
+          return (
+            <>
+              <NavBar />
+              <ApplicationViews />
+            </>
+          );
+        } else {
+          return <Redirect to="/login" />;
+        }
+      }}
+    />
 
-export const KandyKorner = () => {
-
-    return (
-        
-        <Route>
-            <NavBar />
-            <ApplicationViews />
-        </Route>
-        
-    )
-}
+    <Route path="/login">
+      <Login />
+    </Route>
+    <Route path="/register">
+      <Register />
+    </Route>
+  </>
+);
