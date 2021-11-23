@@ -5,6 +5,7 @@ import {useEffect, useState} from "react"
 export const ProductList = () => {
     const [products, setProducts] = useState([])
     
+    
 
 
 
@@ -33,10 +34,12 @@ export const ProductList = () => {
                 {
                     products.map(
                         (productObj) => {
-                            return <p key={productObj.id}>{productObj.name}, {productObj.productType.type}, ${productObj.price}</p>
+                            return <div key={productObj.id}>{productObj.name}, {productObj.productType.type}, ${productObj.price}</div> 
                         }
+                        
                     )
                 }
+                
         
             </div>
 

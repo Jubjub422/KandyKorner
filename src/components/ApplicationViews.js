@@ -4,6 +4,7 @@ import { Route } from "react-router-dom"
 import { EmployeeSignUpForm } from "./Employees/EmployeeForm/EmployeeSignUp"
 import { EmployeeList } from "./Employees/EmployeeList"
 import { CustomerList } from "./Customers/CustomerList"
+import { PurchaseList } from "./Purchases/Purchases"
 
 
 
@@ -25,6 +26,9 @@ export const ApplicationViews = () => {
             </Route>
             <Route path="/employees/create">
                 <EmployeeSignUpForm />
+            </Route>
+            <Route path="/purchases">
+                <PurchaseList />
             </Route>
             <Route exact path="/">
                 <Locations />
