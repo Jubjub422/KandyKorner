@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react"
-
+import "./Products.css"
 
 
 export const ProductList = () => {
@@ -31,10 +31,11 @@ export const ProductList = () => {
         return (
             <>
             <div>
+                <h2>Our Tasty Candies</h2>
                 {
                     products.map(
                         (productObj) => {
-                            return <div key={productObj.id}>{productObj.name}, {productObj.productType.type}, ${productObj.price}</div> 
+                            return <div className="product" key={productObj.id}>{productObj.name}, {productObj.productType.type}, ${productObj.price}</div> 
                         }
                         
                     )

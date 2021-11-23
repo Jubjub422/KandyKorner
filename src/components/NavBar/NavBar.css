@@ -1,0 +1,16 @@
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    background-color: darkgray;
+}
+
+.navbar__item {
+    flex-basis: 20%;
+    list-style-type: none;
+    padding-left: 4px;
+}
+
+.navbar__link {
+    color: blue;
+}

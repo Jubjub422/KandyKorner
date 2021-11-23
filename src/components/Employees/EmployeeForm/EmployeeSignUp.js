@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { NewEmployeeLocationSelect } from "./EmployeeLocationSelect";
-
+import "./SignUp.css"
 
 
 
@@ -106,7 +106,7 @@ export const EmployeeSignUpForm = () => {
                         } />
                 </div>
             </fieldset>
-            <button className="btn btn-primary" onClick={saveEmployee}>
+            <button className="btn" onClick={saveEmployee}>
                 Register
             </button>
         </form>

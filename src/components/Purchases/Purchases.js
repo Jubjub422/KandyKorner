@@ -64,6 +64,7 @@ export const PurchaseList = () => {
     return (
         <>
             <div>
+                <h2>Want Some Candy?</h2>
                 {
                     products.map(
                         (productObj) => {

@@ -4,6 +4,7 @@ import { ApplicationViews } from "./ApplicationViews";
 import { NavBar } from "./NavBar/NavBar";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
+import "./KandyKorner.css"
 
 export const KandyKorner = () => (
   <>

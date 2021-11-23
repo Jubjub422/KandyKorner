@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react"
-
+import "./Locations.css"
 
 export const Locations = () => {
         const [stores, setLocations] = useState([])
@@ -19,10 +19,11 @@ export const Locations = () => {
             return (
                 <>
                 <div>
+                    <h2>Our Perfect Locations</h2>
                     {
                         stores.map(
                             (storeObject) => {
-                                return <h2 key={`store--${storeObject.id}`}>{storeObject.name} {storeObject.address}</h2> 
+                                return <p className="locations" key={`store--${storeObject.id}`}>{storeObject.name} {storeObject.address}</p> 
                             }
                         )
                     }
