@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react"
+import { getLocations } from "../ApiManager"
 import "./Locations.css"
 
 export const Locations = () => {
@@ -6,8 +7,7 @@ export const Locations = () => {
 
         useEffect(
             () => {
-                fetch("http://localhost:8088/locations")
-                    .then(res => res.json())
+                getLocations()
                     .then((locationArray) => {
                         setLocations(locationArray)
                     })

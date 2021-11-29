@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react"
+import { getProducts} from "../ApiManager"
 import "./Products.css"
 
 
@@ -11,8 +12,7 @@ export const ProductList = () => {
 
     useEffect(
         () => {
-            fetch("http://localhost:8088/products?_expand=productType")
-                .then(res => res.json())
+            getProducts()
                 .then((productArray) => {
                     setProducts(productArray)
                 })

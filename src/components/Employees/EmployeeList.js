@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { getEmployees } from "../ApiManager"
 import "./Employees.css"
 
 
@@ -8,8 +9,7 @@ export const EmployeeList = () => {
 
 
     const fetchEmployees = () => {
-        fetch("http://localhost:8088/employees")
-        .then(res => res.json())
+       getEmployees()
         .then((data) => {
             setEmployees(data)
         })

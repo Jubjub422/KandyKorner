@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { getLocations } from "../../ApiManager";
 
 
 export const NewEmployeeLocationSelect = ({employee, setEmployee}) => {
@@ -7,8 +8,7 @@ export const NewEmployeeLocationSelect = ({employee, setEmployee}) => {
     
     useEffect(
         () => {
-            fetch("http://localhost:8088/locations")
-                .then(res => res.json())
+            getLocations()
                 .then((locationArray) => {
                     setLocations(locationArray)
                 })
